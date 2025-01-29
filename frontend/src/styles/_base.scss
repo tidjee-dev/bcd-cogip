@@ -4,6 +4,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 /* Prevent font size inflation */
@@ -11,6 +13,7 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+  font-size: 16px
 }
 
 /* Remove default margin in favour of better control in authored CSS */
