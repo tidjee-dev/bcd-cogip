@@ -4,8 +4,6 @@ services:
     build: ./docker/php
     container_name: ${PROJECT_NAME}-app
     restart: on-failure
-    ports:
-      - "${PHP_PORT:-11000}:9000"
     volumes:
       - ./app:/var/www/html
     depends_on:
@@ -50,7 +48,7 @@ services:
     container_name: ${PROJECT_NAME}-adminer
     restart: on-failure
     ports:
-      - "${ADMINER_PORT:-8080}:8080"
+      - "${ADMINER_PORT:-8081}:80"
     environment:
       ADMINER_DESIGN: ${ADMINER_DESIGN:-hydra}
     depends_on:
