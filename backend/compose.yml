@@ -1,0 +1,58 @@
+services:
+  ###> PHP APACHE ###
+  apache:
+    build: ./docker/php
+    container_name: ${PROJECT_NAME}-app
+    restart: on-failure
+    ports:
+      - "${PHP_PORT:-11000}:9000"
+    volumes:
+      - ./app:/var/www/html
+    depends_on:
+      - mysql
+      - phpmyadmin
+      - adminer
+  ###< PHP APACHE ###
+
+  ###> MYSQL ###
+  mysql:
+    image: mysql
+    container_name: ${PROJECT_NAME}-mysql
+    restart: on-failure
+    ports:
+      - "${MYSQL_PORT:-3306}:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+  ###< MYSQL ###
+
+  ###> PHPMYADMIN ###
+  phpmyadmin:
+    build: ./docker/phpma
+    container_name: ${PROJECT_NAME}-phpmyadmin
+    restart: on-failure
+    ports:
+      - "${PHPMYADMIN_PORT:-8080}:80"
+    environment:
+      PMA_HOST: mysql
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    depends_on:
+      - mysql
+  ###< PHPMYADMIN ###
+
+  ###> ADMINER ###
+  adminer:
+    image: adminer
+    container_name: ${PROJECT_NAME}-adminer
+    restart: on-failure
+    ports:
+      - "${ADMINER_PORT:-8080}:8080"
+    environment:
+      ADMINER_DESIGN: ${ADMINER_DESIGN:-hydra}
+    depends_on:
+      - mysql
+  ###< ADMINER ###
