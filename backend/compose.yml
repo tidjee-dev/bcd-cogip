@@ -1,17 +1,4 @@
 services:
-  ###> PHP APACHE ###
-  apache:
-    build: ./docker/php
-    container_name: ${PROJECT_NAME}-app
-    restart: on-failure
-    volumes:
-      - ./app:/var/www/html
-    depends_on:
-      - mysql
-      - phpmyadmin
-      - adminer
-  ###< PHP APACHE ###
-
   ###> MYSQL ###
   mysql:
     image: mysql
@@ -26,7 +13,21 @@ services:
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
       - ./data/mysql:/var/lib/mysql
+      - ./docker/mysql/mysql-init.sql:/docker-entrypoint-initdb.d/mysql-init.sql
   ###< MYSQL ###
+
+  ###> PHP APACHE ###
+  apache:
+    build: ./docker/php
+    container_name: ${PROJECT_NAME}-app
+    restart: on-failure
+    volumes:
+      - ./app:/var/www/html
+    depends_on:
+      - mysql
+      - phpmyadmin
+      - adminer
+  ###< PHP APACHE ###
 
   ###> PHPMYADMIN ###
   phpmyadmin:
