@@ -1,0 +1,152 @@
+@use 'colors';
+
+.header {
+    background: colors.$background-color;
+    font-family: 'Roboto', sans-serif;
+    padding: 4rem 4rem 0 4rem;
+    .head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            h1{
+                font-size: 1.5rem;
+                margin-right: 2rem;
+            }
+            ul{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                li{
+                    list-style: none;
+                    margin: 0 10px;
+                    a{
+                        text-decoration: none;
+                        color: colors.$color-text;
+                        font-size: 0.9rem;
+                        font-weight: 600;
+                    }
+                    
+                }
+            }
+            li:nth-child(1){
+                border: 1px solid colors.$color-text;
+                padding: 5px 10px;
+            }
+        }
+        .connectSection{
+            a{
+                text-decoration: none;
+                color: colors.$color-text;
+                font-size: 0.9rem;
+                font-weight: 600;
+                margin: 0.5rem;
+            }
+            a:nth-child(1){
+                border-radius: 5px;
+                background: #fff;
+                padding: 0.2rem 0.5rem;
+            }
+        }
+    }
+    
+
+    .rectangle{
+        width: 100%;
+        margin-top: 1.2rem;
+    }
+    
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    padding: 0 0 2rem 0 ;
+    p{
+        font-size: 4.2rem;
+        font-weight: 600;
+    }
+}
+
+
+/*..................................................  section container .....................................................................*/
+
+.containerSection{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    padding: 0 8rem;
+    width: 100%;
+    .tables{
+        margin: 2.5rem;
+        border-collapse: collapse;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-spacing: 0;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin: 0;
+            padding: 0;
+        }
+        h2{
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+        thead{
+            background: colors.$background-color;
+            color: colors.$color-text;
+            font-size: 1.2rem;
+            font-weight: 600;
+            tr{
+                th{
+                    padding: 0.2rem;
+                    text-align: center;
+                }
+            }
+        }
+        tbody{
+            color: colors.$color-text;
+            tr{
+                border: none;
+                background: #fff;
+                font-size: 1rem;
+                font-weight: 600;
+                td{
+                    padding: 0.5rem;
+                    text-align: center;
+                }
+                
+            }
+            tr:nth-child(even){
+                background: #F5F5F5;
+                
+            }
+        }
+    }
+    
+}
+.SectionFoot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    p{
+        font-size: 4.5rem;
+        font-weight: 900;
+        padding: 4rem;
+    }
+    .work{
+        background-image: url('../assets/Rectangle\ 17.png');
+        width: 80%;
+    }
+}   

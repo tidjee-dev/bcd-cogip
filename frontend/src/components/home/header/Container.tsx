@@ -1,4 +1,4 @@
-import PNG from '../../assets/DrawKit Vector Illustration Project Manager (4) 1.png'
+import PNG from '../../../assets/DrawKit Vector Illustration Project Manager (4) 1.png'
 
 export default function Container() {
   return (

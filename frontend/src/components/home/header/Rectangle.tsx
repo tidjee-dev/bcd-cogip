@@ -1,5 +1,4 @@
-import React from 'react'
-import svgRectangle from '../../assets/Rectangle 10@2x.svg'
+import svgRectangle from '../../../assets/Rectangle 10@2x.svg'
 
 export default function Rectangle() {
   return (
