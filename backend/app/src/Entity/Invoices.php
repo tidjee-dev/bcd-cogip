@@ -4,8 +4,12 @@ namespace App\Entity;
 
 use App\Repository\InvoicesRepository;
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Metadata\ApiResource;
+
 
 #[ORM\Entity(repositoryClass: InvoicesRepository::class)]
+#[ApiResource]
+
 class Invoices
 {
     #[ORM\Id]

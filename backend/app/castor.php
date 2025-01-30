@@ -14,6 +14,8 @@ function install(): void
 {
     io()->title('Installing composer dependencies');
     run('composer install');
+    io()->newLine();
+    io()->success('Composer dependencies installed');
 }
 
 /*
@@ -77,6 +79,9 @@ function stopServer(): void
     run('symfony server:stop');
 }
 
+/*
+ * Symfony
+ */
 #[AsTask(description: 'Clear Cache', namespace: 'symfony')]
 function clear(): void
 {
