@@ -13,4 +13,5 @@ export default defineConfig({
     port: 5173, // Optional: Set a specific port for the dev server
     strictPort: true, // Ensures the server fails if the port is already in use
   },
+  assetsInclude: ['**/*.svg'], // Ajoutez cette ligne pour inclure les fichiers SVG
 })

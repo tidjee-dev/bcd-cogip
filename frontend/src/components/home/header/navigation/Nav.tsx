@@ -7,14 +7,14 @@ export default function Nav() {
             <h1>COGIP</h1>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Invoices</a></li>
+                <li><a href="/invoices">Invoices</a></li>
                 <li><a href="#">Companies</a></li>
                 <li><a href="#">Contacts</a></li>
             </ul>
         </nav>
         <div className="connectSection">
-                <a href="#">Sign up</a>
-                <a href="#">Login</a>
+                <a href="/signup">Sign up</a>
+                <a href="/login">Login</a>
         </div>
     </div>
   )
