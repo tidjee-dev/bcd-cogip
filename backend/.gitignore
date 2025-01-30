@@ -1,6 +1,7 @@
 # Files
 .env
 .castor.stub.php
+*.lock
 
 # Directories
 data/
