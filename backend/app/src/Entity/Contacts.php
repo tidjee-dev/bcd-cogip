@@ -4,8 +4,12 @@ namespace App\Entity;
 
 use App\Repository\ContactsRepository;
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Metadata\ApiResource;
+
 
 #[ORM\Entity(repositoryClass: ContactsRepository::class)]
+#[ApiResource]
+
 class Contacts
 {
     #[ORM\Id]
