@@ -2,11 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\CompaniesRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Metadata\ApiResource;
+use App\Repository\CompaniesRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
 
 
 #[ORM\Entity(repositoryClass: CompaniesRepository::class)]
@@ -47,6 +47,11 @@ class Companies
      */
     #[ORM\OneToMany(targetEntity: Contacts::class, mappedBy: 'company_id')]
     private Collection $contacts;
+
+    public function __toString(): string
+    {
+        return $this->name;
+    }
 
     public function __construct()
     {
