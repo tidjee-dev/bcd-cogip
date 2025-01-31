@@ -7,7 +7,7 @@ export default function Container() {
             CUSTOMERS AND 
             INVOICES EASLY
         </p>
-        <img src={PNG} alt="Project Manager" />
+        <img className='pict'src={PNG} alt="Project Manager" />
     </div>
   )
 }

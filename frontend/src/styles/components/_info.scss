@@ -1,0 +1,44 @@
+.info-all{
+    display: flex;
+    flex-direction: row;
+    margin: 6rem 7rem;
+    justify-content: space-between;
+    align-items:center;
+    .name{
+        position: relative;
+        font-size: 4rem;
+    }
+    .name::after{
+        content:'';
+        z-index:-1 ;
+        position: absolute;
+        background-color:rgba(249, 222, 78, 1);
+        width: 30rem;
+        height: 2rem;
+        top: 1.9rem;
+        left: 1.8rem;
+    }
+    .info{
+        gap:4rem;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+.avatar {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    background-color: #ccc;  
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    overflow: hidden; 
+  }
+  
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+  }

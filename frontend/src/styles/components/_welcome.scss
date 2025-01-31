@@ -1,0 +1,46 @@
+.section-all {
+    display: flex;
+    height: 100vh;
+}
+  
+.sidebar {
+    width: 17.8rem;
+    background: blue; // Just for visualization
+}
+  
+.welcome {
+    flex: 1; 
+    background: rgba(245, 245, 251, 1);; // Just for visualization
+    height: 24rem;
+    padding: 54px;
+    position: relative;
+
+    img{
+        position:absolute;
+        top: 0;
+        right: 4rem;
+    }
+
+    .welcome-header{
+        margin-top: 3.8rem;
+        height: 13rem;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(150, 152, 214, 1);
+        border-radius: 10px;
+        padding: 3rem 4rem;
+        h2{
+            font-size: 2rem;
+            font-weight: 900;
+            color:white;
+        }
+        p{
+            color:white;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+    }
+}
+
+
+  

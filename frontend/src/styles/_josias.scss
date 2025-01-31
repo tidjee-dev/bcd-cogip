@@ -63,12 +63,15 @@
 
 .container{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     font-family: 'Inter', sans-serif;
     padding: 0 0 2rem 0 ;
+    .pict{
+    max-width: 50%;
+    }
     p{
-        font-size: 4.2rem;
+        font-size: 3rem;
         font-weight: 600;
     }
 }

@@ -1,0 +1,48 @@
+.contact{
+    border-top: 1px solid rgba(123, 185, 252, 0.2);
+    border-bottom: 1px solid rgba(123, 185, 252, 0.2);
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap:4rem;
+    position: relative;
+    .avatar{
+        height: auto;
+        width: 8.25rem;
+        border-radius: 50%;
+        background-color: #ccc;  
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        overflow: hidden;
+    }
+    
+    .people{
+        display: flex;
+        flex-direction: row;
+        gap:3.7rem;
+        .person{
+            border-radius:3rem;
+            background-color:rgba(245, 245, 245, 1);
+            width: 23.5rem;
+            height: 10.5rem;
+            display: flex;
+            flex-direction: row;
+            align-items:center;
+            padding: 2rem;
+            justify-content: space-between;
+
+        }
+        h2{
+            font-size: 2rem;
+            text-align: right;
+        }
+    }
+}
+.hand{
+    position: absolute;
+    right: 0;
+    bottom: 4rem;
+    height: auto;
+    width: 8rem;
+}
