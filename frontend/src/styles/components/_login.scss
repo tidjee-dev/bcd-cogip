@@ -1,46 +1,30 @@
 @use '../colors';
 
-.signUpContenaire {
-    font-family: 'Roboto', sans-serif;
-    background-color: #F9DE4E;
-  .containerForm{
+.loginContainer{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    width: 100%;
+    flex-direction: column;
     height: 100vh;
-    .formBoxLeft{
-      width: 30%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      img{
-        width: 50%;
-      }
+    font-family: 'Inter', sans-serif;
+    img{
+        width: 100%;
+        
     }
-    .formBoxRight{
-        width: 70%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        .error{
-            color: red;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-        h1{
-            font-size: 2rem;
-            color: colors.$color-text;
-            text-align: center;
-            width: 100%;
-            margin: 20px;
-          }
-        .formContent{
+    h1{
+        font-size: 2rem;
+        color: colors.$color-text;
+        text-align: center;
+        width: 100%;
+        margin: 20px;
+    }
+    .formContent{
           width: 50%;
           padding: 40px;
           background-color: #fff;
           box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+          padding-bottom: 20px;
+          margin-bottom: 40px;
           .inputBox{
             position: relative;
             width: 100%;
@@ -95,16 +79,12 @@
             background-color: #F9DE4E;
             color: #333;  
             cursor: pointer;
-          }
-          .button:disabled{
-            background-color: #F9DE4E;
-            color: #333;  
-            cursor: not-allowed;
-          } 
-          
         }
+        .button:disabled{
+            background-color: #F9DE4E;
+            color: #333;
+            cursor: not-allowed;
+        }
+          
     }
-  }
-  
 }
-

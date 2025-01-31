@@ -1,0 +1,90 @@
+@use '../colors';
+.landing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    height: 100vh; 
+   padding: 4rem;
+    .landingLeft{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; 
+        height: 100%; 
+        p{
+            font-size: 2.2rem;
+            color: colors.$color-text;
+            text-align: center;
+            margin: 20px;
+            transition: all 0.5s;
+            span{
+                font-weight: bolder;
+                font-size: 2.5rem;
+                position: relative;
+                color: colors.$background-color;
+                &::before{
+                    content: ' ';
+                    position: absolute;
+                    height: 2px;
+                    width: 100%;
+                    background-color: colors.$color-text;
+                    bottom: 0;
+                    left: 0;
+                    transition: all 0.5s;
+                    z-index: -1;
+                }
+                &:hover::before{
+                    height: 100%;
+                }
+            }
+        }
+        .connection{
+           display: flex;
+            justify-content: center;
+            margin-top: auto; 
+            padding-bottom: 4rem;   
+            .button{
+                color: colors.$color-text;
+                border: 1px solid colors.$color-text;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-size: 1.5rem;
+                cursor: pointer;
+                margin-right: 20px;
+                width: 150px;
+                text-align: center;
+                text-decoration: none;
+                transition: all 0.7s;
+                &:hover{
+                    background: colors.$background-color;
+                    color: colors.$color-text;
+                    border: 1px solid colors.$background-color;
+                }
+            }
+            .btn{
+                background-color: colors.$color-text;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                font-size: 1.5rem;
+                cursor: pointer;
+                margin-right: 20px;
+                width: 150px;
+                text-align: center;
+                transition: all 0.5s;
+                text-decoration: none;
+                &:hover{
+                    background: none;
+                    color: colors.$color-text;
+                    border: 1px solid colors.$color-text;
+                }
+            }
+        }
+    }
+ 
+        Img{
+            width: 40%;
+        }
+    
+}

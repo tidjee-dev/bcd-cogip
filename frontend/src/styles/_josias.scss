@@ -1,5 +1,15 @@
 @use 'colors';
-
+.titre{
+    font-size: 3rem;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    background-color: colors.$background-color;
+    padding: 1.2rem;
+    text-underline-offset: 1.6rem;
+}
 .header {
     background: colors.$background-color;
     font-family: 'Roboto', sans-serif;
