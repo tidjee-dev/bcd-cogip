@@ -1,9 +1,18 @@
-import React from 'react'
+import { CiMenuBurger } from "react-icons/ci";
+import { useState } from "react";
 
 export default function Nav() {
+  const [toggleMenu, setToggleMenu] = useState(false);
+
+  const handleToggleMenu = () => {
+    setToggleMenu(!toggleMenu); // Inverse l'état à chaque clic
+  };
   return (
     <div className="head">
-        <nav>
+        <div onClick={handleToggleMenu} className="burgerMenu">
+            <CiMenuBurger />
+        </div>
+        <nav className={toggleMenu ? "navMenu" : "navHidden"}>
             <h1>COGIP</h1>
             <ul>
                 <li><a href="#">Home</a></li>

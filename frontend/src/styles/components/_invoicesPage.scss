@@ -1,0 +1,67 @@
+@use '../colors';
+
+.containerInvoice{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    .inputDiv{
+        display: flex;
+        gap: 2rem;
+        width: 100%;
+        position: relative;
+          input{
+            width: 100%;
+            padding: 10px 0;
+            font-size: 17px;
+            color: #333;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 30px;
+            border: none;
+            background: transparent;
+            border-bottom: 1px solid #333;
+            outline: none;
+          }
+          label{
+            color: #333;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 17px;
+            pointer-events: none;
+            -webkit-transition: 0.2s ease-in;
+            -moz-transition: 0.2s ease-in;
+            -o-transition: 0.2s ease-in;
+            transition: 0.2s ease-in;
+          }
+
+          input:focus ~ label, .inputDiv input:valid ~ label{
+            top: -30px;
+            left: 0;
+            color: #333;
+            font-size: 16px;
+            font-style: italic;
+        }
+          
+    }
+    .btn{
+        width: 100%;
+        padding: 10px 0;
+        font-size: 17px;
+        color: #333;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 30px;
+        border: none;
+        background: transparent;
+        outline: none;
+        background-color: #9698d6;
+        color: #fff;
+        cursor: pointer;
+      }
+    
+  }
+
+ 

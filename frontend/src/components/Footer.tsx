@@ -25,7 +25,7 @@ const Footer = () => {
               <p> (123) 456-7890</p>
             </div>
             <div className="number2">
-              <img src={printer} alt="" />
+              <img src={printer} alt="printer icon" />
               <p>(123) 456-7890</p>          
             </div>
           </div>
@@ -33,27 +33,27 @@ const Footer = () => {
             <p>Social Media</p>
           
             <div className="icons">
-              <img src={facebook} alt="" />
-              <img src={twitter} alt="" />
-              <img src={linkedIn} alt="" />
-              <img src={youtube} alt="" />
-              <img src={instagram} alt="" />
-              <img src={googleplus} alt="" />
-              <img src={pinterest} alt="" />
-              <img src={wifi} alt="" />
+              <img src={facebook} alt="facebook icon" />
+              <img src={twitter} alt="twitter icon" />
+              <img src={linkedIn} alt="linkedIn icon" />
+              <img src={youtube} alt="youtube icon" />
+              <img src={instagram} alt="instagram icon" />
+              <img src={googleplus} alt="googleplus icon" />
+              <img src={pinterest} alt="pinterest icon" />
+              <img src={wifi} alt="wifi icon" />
             </div>
 
         </div>
       </div>
-    </div>
+      </div>
       <div className="container">
         <nav>
           <ul className="nav-links">
-            <li><a href="">Home</a> </li> 
-            <li><a href="">Invoices</a></li>
-            <li><a href="">Companies</a></li>
-            <li><a href="">Contacts</a></li>
-            <li><a href="">PRIVACY POLICY</a></li>
+            <li><a href="Home">Home</a> </li> 
+            <li><a href="invoice">Invoices</a></li>
+            <li><a href="Companies">Companies</a></li>
+            <li><a href="Contacts">Contacts</a></li>
+            <li><a href="#">PRIVACY POLICY</a></li>
             </ul>
         </nav>
         <p className="copyright">Copyright © 2022 • COGIP Inc.</p>
